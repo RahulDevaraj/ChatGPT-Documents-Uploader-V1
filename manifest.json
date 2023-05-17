@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Documents Uploader",
+  "version": "1.0",
+  "description": "Upload several filetypes including docx, pdf, txt and much more to ChatGPT",
+  "action": {
+    "default_icon": {
+      "128": "images/icon128.png"
+    }
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "mammoth.browser.min.js",
+        "pdf.min.js",
+        "pdf.worker.min.js",
+        "content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "128": "images/icon128.png"
+  }
+}
