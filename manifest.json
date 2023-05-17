@@ -8,12 +8,9 @@
       "128": "images/icon128.png"
     }
   },
-  "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": [
-        "https://chat.openai.com/*"
-      ],
+      "matches": ["https://chat.openai.com/*"],
       "js": [
         "mammoth.browser.min.js",
         "pdf.min.js",
